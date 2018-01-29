@@ -374,7 +374,7 @@ contains
     integer    :: tindex_f,m_k,o_k,t_k
 
     if(stats%selectOpt.eq.1.and.ds2%selectNlevs.ge.1.and.&
-         ds3.selectNlevs.ge.1) then 
+         ds3%selectNlevs.ge.1) then 
 
        call getDataTimeIndex(tindex_f, LVT_rc%tavgInterval)
 
