@@ -1,0 +1,32 @@
+#!/bin/sh 
+#!/bin/sh 
+
+echo "------------------------------------------------------------------------"
+echo 'Compiling LVT version 1.0...'
+
+echo "------------------------------------------------------------------------"
+
+echo 'Building dependency generator...'
+cd ./make/MAKDEP || exit 1
+gmake
+if [ $? -eq 0 ]; then
+  echo "------------------------------------------------------------------------"
+  echo 'Compiling LVT source code...'
+  cd .. || exit 1
+  gmake
+  if [ $? -eq 0 ]; then
+    cp LVT .. || exit 1
+    echo "Compile finished "
+    echo "------------------------------------------------------------------------"
+  else
+    echo "Compile failed "
+    echo "------------------------------------------------------------------------"
+    exit 1
+  fi
+else
+  echo "Dependecy generation failed"
+  echo "------------------------------------------------------------------------"
+  exit 1
+fi
+
+exit 0

@@ -1,0 +1,27 @@
+FC              = gfortran
+FC77            = gfortran
+LD              = gfortran
+CC              = gcc
+AR              = ar
+MOD_ESMF        = /disk/scratch/local/dvalters/LVT/esmf/mod/modO/Linux.gfortran.64.openmpi.default/
+LIB_ESMF        = /disk/scratch/local/dvalters/LVT/esmf/lib/libO/Linux.gfortran.64.openmpi.default/
+INC_NETCDF      = /usr/lib64/
+LIB_NETCDF      = /usr/lib64/
+INC_HDF4        = /usr/lib64/hdf/
+LIB_HDF4        = /usr/lib64/hdf/
+INC_HDF5        = /usr/lib64/
+LIB_HDF5        = /usr/lib64/
+INC_HDFEOS      = /usr/lib64/hdf/
+LIB_HDFEOS      = /usr/lib64/hdf/
+INC_JASPER      = /include/
+LIB_JASPER      = /lib/
+INC_GRIBAPI     = /usr/lib64/gfortran/modules/
+LIB_GRIBAPI     = /usr/share/gfortran/modules/
+INC_FORTRANGIS1 = 
+INC_FORTRANGIS2 = 
+LIB_FORTRANGIS  = 
+LIB_GDAL        = 
+CFLAGS          = -c -DGFORTRAN 
+FFLAGS77        = -c -pass-exit-codes -O2   -fconvert=big-endian -DHIDE_SHR_MSG -DNO_SHR_VMATH -DGFORTRAN -DHIDE_MPI -I$(MOD_ESMF) -I$(INC_GRIBAPI)  -I$(INC_NETCDF)  -I$(INC_HDFEOS)  -I$(INC_HDF4)  -I$(INC_HDF5) 
+FFLAGS          =  -c -pass-exit-codes -ffree-line-length-0 -O2   -fconvert=big-endian -DHIDE_SHR_MSG -DNO_SHR_VMATH -DGFORTRAN -DHIDE_MPI -I$(MOD_ESMF) -I$(INC_GRIBAPI)  -I$(INC_NETCDF)  -I$(INC_HDFEOS)  -I$(INC_HDF4)  -I$(INC_HDF5) 
+LDFLAGS         =  -L$(LIB_JASPER) -ljasper -L$(LIB_GRIBAPI) -lgrib_api_f90 -lgrib_api -L$(LIB_ESMF) -lesmf -lstdc++  -L$(LIB_NETCDF) -lnetcdff -lnetcdf -L$(LIB_HDFEOS) -lhdfeos -lGctp -L$(LIB_HDF4) -lmfhdf -ldf -ljpeg -lz  -L$(LIB_HDF5) -lhdf5_fortran -lhdf5_hl -lhdf5

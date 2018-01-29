@@ -1,0 +1,16 @@
+#!/bin/sh 
+
+echo "------------------------------------------------------------------------"
+echo 'Setting up configuration for LVT version 7.2...'
+
+cd arch
+perl Config.pl
+mv configure.lvt ../make
+mv LVT_misc.h ../make
+mv LVT_NetCDF_inc.h ../make
+echo "Settings are written to configure.lvt in the make directory"
+echo "If you wish to change settings, please edit that file."
+echo "To compile, run the compile script. "
+echo "------------------------------------------------------------------------"
+
+
