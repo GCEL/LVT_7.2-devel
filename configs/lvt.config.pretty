@@ -2,7 +2,7 @@ LVT running mode:                       "Data intercomparison"
 Map projection of the LVT analysis:     "latlon"
 LVT output format:                      "netcdf"
 LVT output methodology:                 "2d gridspace"
-Analysis data sources:                  "GL6 JULES data"  "MOD16A2"
+Analysis data sources:                  "JULES data"  "MOD16A2" "None"
 Experiment code:                        111
 Start mode:                             "coldstart"
 LVT restart output interval:            "1mo"
@@ -36,7 +36,7 @@ Run domain resolution (dy):          0.5
 Input domain and mask data file:      /home/dvalters/Datasets/landsea_proj.nc
 
 LVT datastream attributes table::
-GPP         1  Kg/m2/s2   DN   1   1 GPP       1  Kg/m2/s2    DN    1  1
+GPP        1 1  Kg/m2s2   DN  1 1 GPP     1 1  Kg/m2s2    DN    1  1
 :: 
 
 LVT surface soil layer thickness:       0.1
