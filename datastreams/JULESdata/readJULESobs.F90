@@ -128,8 +128,8 @@ subroutine readJULESObs(source)
      call LVT_verify(ios, 'Error nf90_inquire_dimension: time')
 
      allocate(JULESobs(source)%time_val(JULESobs(source)%ntimes))
-     allocate(JULESobs(source)%lat(JULESobs(source)%nx,JULESobs(source)%ny))
-     allocate(JULESobs(source)%lon(JULESobs(source)%nx,JULESobs(source)%ny))
+     allocate(JULESobs(source)%lat(JULESobs(source)%ny))
+     allocate(JULESobs(source)%lon(JULESobs(source)%nx))
 
      if(LVT_MOC_RAINF(source).ge.1) then 
         allocate(JULESobs(source)%rainf_jules(JULESobs(source)%nx,JULESobs(source)%ny,JULESobs(source)%ntimes))
@@ -396,8 +396,8 @@ subroutine readJULESObs(source)
      do c=1,JULESobs(source)%nx
         do r=1,JULESobs(source)%ny
            call latlon_to_ij(LVT_domain%lvtproj, &
-                JULESobs(source)%lat(c,r), &
-                JULESobs(source)%lon(c,r),&
+                JULESobs(source)%lat(r), &
+                JULESobs(source)%lon(c),&
                 col,row)
            stn_col = nint(col)
            stn_row = nint(row)

@@ -58,7 +58,7 @@ module JULES_obsMod
      real,  allocatable      :: tstar_jules(:,:,:)
      real,  allocatable      :: gpp_jules(:,:,:)
      real,  allocatable      :: time_val(:)
-     real,  allocatable      :: lat(:,:), lon(:,:)
+     real,  allocatable      :: lat(:), lon(:)
      
      integer                 :: nx, ny, nsoil
 

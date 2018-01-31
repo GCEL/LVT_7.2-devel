@@ -592,7 +592,7 @@ contains
              
              if((LVT_rc%startmode).eq."coldstart") then 
                 open(metric%ftn_ts_loc(i,1),file=(filename),&
-                     form='formatted')
+                     ACCESS='APPEND',form='formatted')
              elseif((LVT_rc%startmode).eq."restart") then
                 !copy the files over before
                    !             call system('cp '//(filename)//' temp')

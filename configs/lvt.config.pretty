@@ -52,7 +52,7 @@ Metrics computation frequency:            "1mo"
 Temporal lag in metric computations:    1da
 Spatial averaging mode:                 "pixel-by-pixel"
 Regional mask file for spatial averaging: none
-Stats output directory:                 ./STATS
+Metrics output directory:                 ./STATS
 Metrics output frequency:                  "1mo"
 Apply temporal smoothing to obs: 0
 Obs temporal smoothing window half length: "2da"
