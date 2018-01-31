@@ -188,7 +188,7 @@ ISMN observation directory:             ./ISMN
 LPRM AMSR-E soil moisture observation directory: ./LPRM-AMSRE
 LPRM AMSR-E use raw data:                        0
 
-MOD16A2 data directory:                 ./disk/scratch/local/dvalters/netcdf_test/MODIS_0.5-degree/mergedMODIS_3dim.nc
+MOD16A2 data directory:                 /disk/scratch/local/dvalters/netcdf_test/MODIS_0.5-degree/mergedMODIS_3dim.nc
 
 MODIS LST data directory:
 

@@ -20,44 +20,45 @@ Map projection of the LVT analysis: "latlon"
 Analysis data class:               "LSM"
 LVT output format:                 "netcdf" 
 LVT output methodology:            "2d gridspace"
-Analysis data sources:            "JULES data" "FLUXNET2015 (NetCDF) dataset"
+Analysis data sources:            "JULES data" "MOD16A2"
+# "FLUXNET2015 (NetCDF) dataset"
 
  Start mode:                                coldstart
  LVT restart output interval:               "1mo"
  LVT restart filename:                      none
- Starting year:                             
- Starting month:                            
- Starting day:                              
- Starting hour:                             
- Starting minute:                           
- Starting second:                           
- Ending year:                               
- Ending month:                              
- Ending day:                                
- Ending hour:                                 
- Ending minute:                             
- Ending second:                             
- LVT clock timestep:                       "1hr"
+ Starting year:                             2000
+ Starting month:                            1 
+ Starting day:                              1
+ Starting hour:                             0
+ Starting minute:                           0
+ Starting second:                           0
+ Ending year:                               2010
+ Ending month:                              12
+ Ending day:                                31
+ Ending hour:                               0
+ Ending minute:                             0 
+ Ending second:                             0
+ LVT clock timestep:                       "1mo"
  Undefined value:                          -9999
  LVT diagnostic file:                        
  
- Input domain and mask data file:
+ Input domain and mask data file:    /home/dvalters/Datasets/landsea_proj.nc
 #LVT analysis domain
- Run domain lower left lat:                  
- Run domain lower left lon:                 
- Run domain upper right lat:                
- Run domain upper right lon:                
- Run domain resolution (dx):                 1.0
- Run domain resolution (dy):                 1.0
+ Run domain lower left lat:                 -90.0 
+ Run domain lower left lon:                 -180.0
+ Run domain upper right lat:                90
+ Run domain upper right lon:                180
+ Run domain resolution (dx):                 0.5
+ Run domain resolution (dy):                 0.5
  
 #model soil moisture vs obs soil moisture
 LVT datastream attributes table::
-Qle  1  1  W/m2   -    1   1 Qle  1  1  W/m2   -    1   1
-Qh   1  1  W/m2   -    1   1 Qh   1  1  W/m2   -    1   1
-Qtau 1  1  m/s    -    1   1 Qtau 1  1  m/s    -    1   1 
+#Qle  1  1  W/m2   -    1   1 Qle  1  1  W/m2   -    1   1
+#Qh   1  1  W/m2   -    1   1 Qh   1  1  W/m2   -    1   1
+#Qtau 1  1  m/s    -    1   1 Qtau 1  1  m/s    -    1   1 
 GPP  1  1  umol/m2s -  1   1 GPP  1  1  umol/m2s -  1   1
-Psurf_f 1 1 Pa    -    1   1 Psurf_f 1 1 Pa    -    1   1
-AvgSurfT 1 1 K    -    1   1 AvgSurfT 1 1 K    -    1   1
+#Psurf_f 1 1 Pa    -    1   1 Psurf_f 1 1 Pa    -    1   1
+#AvgSurfT 1 1 K    -    1   1 AvgSurfT 1 1 K    -    1   1
 ::
 
  LVT surface soil layer thickness:  0.10
@@ -72,13 +73,13 @@ AvgSurfT 1 1 K    -    1   1 AvgSurfT 1 1 K    -    1   1
  Metrics computation frequency:                    "1hr" 
  Metrics output frequency:                         "1hr"
  Starting month if a shifted year definition is used in temporal averaging: 1
- Time series location file:                      
- Metrics attributes file:
+ Time series location file:                       ./TS_LOCATIONS.TXT
+ Metrics attributes file:                         ./METRICS.TBL
  Seasonal cycle minimum count threshold:          0 
  Seasonal cycle interval type:                    "monthly"
  Average diurnal cycle minimum count threshold:   0
  Averaging window for computing mean values in anomaly calculations: "monthly"
- Metrics output directory:                         
+ Metrics output directory:                        ./STATS 
  Spatial averaging mode:                          "pixel-by-pixel"
  Variable-based stratification:                   0 
  Confidence interval (%):                         95
@@ -87,8 +88,16 @@ AvgSurfT 1 1 K    -    1   1 AvgSurfT 1 1 K    -    1   1
  Apply temporal smoothing to obs:                 0 
 # 
 
-JULES data file:
-JULES timestep: 
-JULES data reference time:
+#JULES data file:
+#JULES timestep: 
+#JULES data reference time:
+
+# For the new JULES module from lvt7.2
+JULES data file: /disk/scratch/local/dvalters/netcdf_test/JULES_0.5-degree/JULES_WFDEI_global_dyn_ALL_timevar.nc
+JULES timestep:               3600       
+JULES data reference time:    2000 01 01 00 00 00
+
 FLUXNET2015 observation directory: 
 FLUXNET2015 station list file:
+
+MOD16A2 data directory: /disk/scratch/local/dvalters/netcdf_test/MODIS_0.5-degree/mergedMODIS_3dim.nc
