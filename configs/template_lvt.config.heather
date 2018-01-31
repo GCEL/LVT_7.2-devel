@@ -1,0 +1,94 @@
+#----------------------------------------------------------------------------
+# README
+# 
+# This LVT configuration shows an example of comparing variables from
+# JULES output against point data from the FLUXNET2015 
+# network
+#
+# The model output from JULES is produced for single points,  
+# at half hourly intervals. 
+# The FLUXNET2015 data is mostly half hourly
+# 
+# The following variables are compared: Qle, Qh, Qtau, GPP
+# 
+# The following metrics are used: Mean and Anomaly correlation
+#
+#----------------------------------------------------------------------------
+
+LVT running mode:                   "Data intercomparison"
+Map projection of the LVT analysis: "latlon"
+Analysis data class:               "LSM"
+LVT output format:                 "netcdf" 
+LVT output methodology:            "2d gridspace"
+Analysis data sources:            "JULES data" "FLUXNET2015 (NetCDF) dataset"
+
+ Start mode:                                coldstart
+ LVT restart output interval:               "1mo"
+ LVT restart filename:                      none
+ Starting year:                             
+ Starting month:                            
+ Starting day:                              
+ Starting hour:                             
+ Starting minute:                           
+ Starting second:                           
+ Ending year:                               
+ Ending month:                              
+ Ending day:                                
+ Ending hour:                                 
+ Ending minute:                             
+ Ending second:                             
+ LVT clock timestep:                       "1hr"
+ Undefined value:                          -9999
+ LVT diagnostic file:                        
+ 
+ Input domain and mask data file:
+#LVT analysis domain
+ Run domain lower left lat:                  
+ Run domain lower left lon:                 
+ Run domain upper right lat:                
+ Run domain upper right lon:                
+ Run domain resolution (dx):                 1.0
+ Run domain resolution (dy):                 1.0
+ 
+#model soil moisture vs obs soil moisture
+LVT datastream attributes table::
+Qle  1  1  W/m2   -    1   1 Qle  1  1  W/m2   -    1   1
+Qh   1  1  W/m2   -    1   1 Qh   1  1  W/m2   -    1   1
+Qtau 1  1  m/s    -    1   1 Qtau 1  1  m/s    -    1   1 
+GPP  1  1  umol/m2s -  1   1 GPP  1  1  umol/m2s -  1   1
+Psurf_f 1 1 Pa    -    1   1 Psurf_f 1 1 Pa    -    1   1
+AvgSurfT 1 1 K    -    1   1 AvgSurfT 1 1 K    -    1   1
+::
+
+ LVT surface soil layer thickness:  0.10
+ LVT root zone soil layer thickness:  1.0  
+ 
+#stats specifications (only applicable to retrospective mode)
+ Apply external mask:                            0
+ External mask directory:                        none
+ Compute information theory metrics:             0 
+ Compute ensemble metrics:                       0  
+ Observation count threshold:                    0
+ Metrics computation frequency:                    "1hr" 
+ Metrics output frequency:                         "1hr"
+ Starting month if a shifted year definition is used in temporal averaging: 1
+ Time series location file:                      
+ Metrics attributes file:
+ Seasonal cycle minimum count threshold:          0 
+ Seasonal cycle interval type:                    "monthly"
+ Average diurnal cycle minimum count threshold:   0
+ Averaging window for computing mean values in anomaly calculations: "monthly"
+ Metrics output directory:                         
+ Spatial averaging mode:                          "pixel-by-pixel"
+ Variable-based stratification:                   0 
+ Confidence interval (%):                         95
+ External data-based stratification:              0
+ Stratification attributes file:                  none
+ Apply temporal smoothing to obs:                 0 
+# 
+
+JULES data file:
+JULES timestep: 
+JULES data reference time:
+FLUXNET2015 observation directory: 
+FLUXNET2015 station list file:

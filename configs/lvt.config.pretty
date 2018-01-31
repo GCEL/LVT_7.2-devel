@@ -323,6 +323,11 @@ Number of state variables in the DA update: 4
 
 # For the new JULES module from lvt7.2
 JULES data file: /disk/scratch/local/dvalters/netcdf_test/JULES_0.5-degree/JULES_WFDEI_global_dyn_ALL_timevar.nc
+JULES timestep:               3600       
+JULES data reference time:    2000 01 01 00 00 00
+
+FLUXNET2015 observation directory:
+FLUXNET2015 station list file:
 
 GL6 JULES data directory: /disk/scratch/local/dvalters/netcdf_test/JULES_0.5-degree/JULES_WFDEI_global_dyn_ALL_timevar.nc
 #GL6 JULES data directory: /home/dvalters/Datasets/WFDEI_global_dyn.month.2d.gpp_gb.2000.1.nc 
